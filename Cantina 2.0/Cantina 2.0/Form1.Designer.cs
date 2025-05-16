@@ -36,11 +36,15 @@
             btnRemover = new Button();
             lblTotal = new Label();
             btnFinalizar = new Button();
-            numericUpDown1 = new NumericUpDown();
+            btnQuantidade = new NumericUpDown();
             numericQuantidade = new Label();
             pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)btnQuantidade).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // txtProdutos
@@ -48,7 +52,7 @@
             txtProdutos.AutoSize = true;
             txtProdutos.BackColor = Color.FromArgb(213, 251, 62);
             txtProdutos.Font = new Font("Broadway", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtProdutos.Location = new Point(116, 65);
+            txtProdutos.Location = new Point(110, 107);
             txtProdutos.Name = "txtProdutos";
             txtProdutos.Size = new Size(65, 14);
             txtProdutos.TabIndex = 2;
@@ -59,7 +63,7 @@
             txtCarrinho.AutoSize = true;
             txtCarrinho.BackColor = Color.FromArgb(213, 251, 62);
             txtCarrinho.Font = new Font("Broadway", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtCarrinho.Location = new Point(618, 65);
+            txtCarrinho.Location = new Point(606, 107);
             txtCarrinho.Name = "txtCarrinho";
             txtCarrinho.Size = new Size(64, 14);
             txtCarrinho.TabIndex = 3;
@@ -69,7 +73,7 @@
             // 
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(26, 100);
+            listBox1.Location = new Point(21, 142);
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(251, 169);
             listBox1.TabIndex = 4;
@@ -78,14 +82,14 @@
             // 
             listBox2.FormattingEnabled = true;
             listBox2.ItemHeight = 15;
-            listBox2.Location = new Point(508, 100);
+            listBox2.Location = new Point(502, 142);
             listBox2.Name = "listBox2";
             listBox2.Size = new Size(270, 169);
             listBox2.TabIndex = 5;
             // 
             // btnAdicionar
             // 
-            btnAdicionar.Location = new Point(354, 114);
+            btnAdicionar.Location = new Point(354, 190);
             btnAdicionar.Name = "btnAdicionar";
             btnAdicionar.Size = new Size(75, 23);
             btnAdicionar.TabIndex = 6;
@@ -95,7 +99,7 @@
             // 
             // btnRemover
             // 
-            btnRemover.Location = new Point(354, 184);
+            btnRemover.Location = new Point(354, 246);
             btnRemover.Name = "btnRemover";
             btnRemover.Size = new Size(75, 23);
             btnRemover.TabIndex = 7;
@@ -108,7 +112,7 @@
             lblTotal.AutoSize = true;
             lblTotal.BackColor = Color.FromArgb(213, 251, 62);
             lblTotal.Font = new Font("Broadway", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTotal.Location = new Point(565, 289);
+            lblTotal.Location = new Point(563, 322);
             lblTotal.Name = "lblTotal";
             lblTotal.Size = new Size(107, 22);
             lblTotal.TabIndex = 8;
@@ -124,23 +128,24 @@
             btnFinalizar.UseVisualStyleBackColor = true;
             btnFinalizar.Click += btnFinalizar_Click;
             // 
-            // numericUpDown1
+            // btnQuantidade
             // 
-            numericUpDown1.Location = new Point(157, 310);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(120, 23);
-            numericUpDown1.TabIndex = 10;
+            btnQuantidade.Location = new Point(152, 326);
+            btnQuantidade.Name = "btnQuantidade";
+            btnQuantidade.Size = new Size(120, 23);
+            btnQuantidade.TabIndex = 10;
             // 
             // numericQuantidade
             // 
             numericQuantidade.AutoSize = true;
             numericQuantidade.BackColor = Color.FromArgb(213, 251, 62);
             numericQuantidade.Font = new Font("Broadway", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            numericQuantidade.Location = new Point(26, 310);
+            numericQuantidade.Location = new Point(26, 330);
             numericQuantidade.Name = "numericQuantidade";
             numericQuantidade.Size = new Size(120, 19);
             numericQuantidade.TabIndex = 11;
             numericQuantidade.Text = "Quantidade:";
+            numericQuantidade.Click += numericQuantidade_Click;
             // 
             // pictureBox1
             // 
@@ -152,15 +157,37 @@
             pictureBox1.TabIndex = 12;
             pictureBox1.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.raio;
+            pictureBox2.Location = new Point(-9, -7);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(281, 101);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 13;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.raio_invertido;
+            pictureBox3.Location = new Point(527, 365);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(281, 97);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 14;
+            pictureBox3.TabStop = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(213, 251, 62);
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(numericQuantidade);
-            Controls.Add(numericUpDown1);
+            Controls.Add(btnQuantidade);
             Controls.Add(btnFinalizar);
             Controls.Add(lblTotal);
             Controls.Add(btnRemover);
@@ -171,8 +198,10 @@
             Controls.Add(txtProdutos);
             Name = "Form1";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnQuantidade).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -186,8 +215,10 @@
         private Button btnRemover;
         private Label lblTotal;
         private Button btnFinalizar;
-        private NumericUpDown numericUpDown1;
+        private NumericUpDown btnQuantidade;
         private Label numericQuantidade;
         private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
     }
 }
