@@ -52,7 +52,7 @@
             // txtProdutos
             // 
             txtProdutos.AutoSize = true;
-            txtProdutos.BackColor = Color.FromArgb(213, 251, 62);
+            txtProdutos.BackColor = Color.FromArgb(230, 255, 0);
             txtProdutos.Font = new Font("Broadway", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtProdutos.Location = new Point(110, 107);
             txtProdutos.Name = "txtProdutos";
@@ -63,7 +63,7 @@
             // txtCarrinho
             // 
             txtCarrinho.AutoSize = true;
-            txtCarrinho.BackColor = Color.FromArgb(213, 251, 62);
+            txtCarrinho.BackColor = Color.FromArgb(230, 255, 0);
             txtCarrinho.Font = new Font("Broadway", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtCarrinho.Location = new Point(606, 107);
             txtCarrinho.Name = "txtCarrinho";
@@ -77,7 +77,7 @@
             listBox1.ItemHeight = 15;
             listBox1.Location = new Point(21, 142);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(251, 169);
+            listBox1.Size = new Size(251, 154);
             listBox1.TabIndex = 4;
             // 
             // listBox2
@@ -86,7 +86,7 @@
             listBox2.ItemHeight = 15;
             listBox2.Location = new Point(502, 142);
             listBox2.Name = "listBox2";
-            listBox2.Size = new Size(270, 169);
+            listBox2.Size = new Size(270, 154);
             listBox2.TabIndex = 5;
             listBox2.SelectedIndexChanged += listBox2_SelectedIndexChanged;
             // 
@@ -113,7 +113,7 @@
             // lblTotal
             // 
             lblTotal.AutoSize = true;
-            lblTotal.BackColor = Color.FromArgb(213, 251, 62);
+            lblTotal.BackColor = Color.FromArgb(230, 255, 0);
             lblTotal.Font = new Font("Broadway", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblTotal.Location = new Point(563, 322);
             lblTotal.Name = "lblTotal";
@@ -141,7 +141,7 @@
             // numericQuantidade
             // 
             numericQuantidade.AutoSize = true;
-            numericQuantidade.BackColor = Color.FromArgb(213, 251, 62);
+            numericQuantidade.BackColor = Color.FromArgb(230, 255, 0);
             numericQuantidade.Font = new Font("Broadway", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             numericQuantidade.Location = new Point(26, 330);
             numericQuantidade.Name = "numericQuantidade";
@@ -204,7 +204,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(213, 251, 62);
+            BackColor = Color.FromArgb(230, 255, 0);
             ClientSize = new Size(800, 450);
             Controls.Add(label1);
             Controls.Add(comboBox);
@@ -223,7 +223,7 @@
             Controls.Add(txtProdutos);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "Cantina 10.0";
             ((System.ComponentModel.ISupportInitialize)btnQuantidade).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

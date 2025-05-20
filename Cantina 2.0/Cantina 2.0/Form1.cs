@@ -30,6 +30,8 @@ namespace Cantina_2._0
 
             btnQuantidade.Minimum = 1;
             btnQuantidade.Maximum = 10;
+            
+            
         }
 
         internal class Pagamento
@@ -50,11 +52,14 @@ namespace Cantina_2._0
             {
                 itens.Add(pagamento);
             }
+            
 
             public List<Pagamento> ObterPagamentos()
             {
                 return itens;
             }
+
+            
         }
 
         public class Carrinho
@@ -124,6 +129,7 @@ namespace Cantina_2._0
 
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
+
             MessageBox.Show($"Total do pedido: R$ {carrinho.Total():F2}", "Pedido Finalizado");
             carrinho.Limpar();
             listBox2.Items.Clear();
