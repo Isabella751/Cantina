@@ -1,5 +1,6 @@
 using System.Drawing.Text;
 using System.Reflection.Metadata.Ecma335;
+using System.Windows.Forms;
 using static Cantina_2._0.Form1;
 
 namespace Cantina_2._0
@@ -13,28 +14,44 @@ namespace Cantina_2._0
         {
             InitializeComponent();
             carrinho = new Carrinho();
-            listBox1.DataSource = produtos;
+            produtos = new List<Produto>();
             listBox1.DisplayMember = "Nome";
             listBox1.ValueMember = "Preco";
 
-            listBox1.Items.Add(new Produto { Nome = "Pão de Queijo", Preco = 3.50 });
-            listBox1.Items.Add(new Produto { Nome = "Coxinha", Preco = 5.00 });
-            listBox1.Items.Add(new Produto { Nome = "Pastel de Carne", Preco = 6.00 });
-            listBox1.Items.Add(new Produto { Nome = "Pastel de Queijo", Preco = 5.50 });
-            listBox1.Items.Add(new Produto { Nome = "Suco Natural (300mL)", Preco = 4.00 });
-            listBox1.Items.Add(new Produto { Nome = "Refrigerante Lata", Preco = 4.50 });
-            listBox1.Items.Add(new Produto { Nome = "Hambúrguer Simples", Preco = 8.00 });
-            listBox1.Items.Add(new Produto { Nome = "Hambúrguer com Queijo", Preco = 9.00 });
-            listBox1.Items.Add(new Produto { Nome = "X-Tudo", Preco = 12.00 });
-            listBox1.Items.Add(new Produto { Nome = "Água Mineral (500mL)", Preco = 2.50 });
+            listBox1.Items.Add(new Produto { Nome = "Pão de Queijo (3,50)", Preco = 3.50 });
+            listBox1.Items.Add(new Produto { Nome = "Coxinha (5,00)", Preco = 5.00 });
+            listBox1.Items.Add(new Produto { Nome = "Pastel de Carne (6,00)", Preco = 6.00 });
+            listBox1.Items.Add(new Produto { Nome = "Pastel de Queijo (5,50)", Preco = 5.50 });
+            listBox1.Items.Add(new Produto { Nome = "Suco Natural (300mL) (4,00)", Preco = 4.00 });
+            listBox1.Items.Add(new Produto { Nome = "Refrigerante Lata (4,50)", Preco = 4.50 });
+            listBox1.Items.Add(new Produto { Nome = "Hambúrguer Simples (8,00)", Preco = 8.00 });
+            listBox1.Items.Add(new Produto { Nome = "Hambúrguer com Queijo (9,00)", Preco = 9.00 });
+            listBox1.Items.Add(new Produto { Nome = "X-Tudo (12,00)", Preco = 12.00 });
+            listBox1.Items.Add(new Produto { Nome = "Água Mineral (500mL) (2,50)", Preco = 2.50 });
 
             btnQuantidade.Minimum = 1;
             btnQuantidade.Maximum = 10;
-            
-            
+
+            Form1_Load(null, null);
         }
 
-        internal class Pagamento
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+            comboBox.Items.Add(new Pagamento { FormaPagamento = "Dinheiro" });
+            comboBox.Items.Add(new Pagamento { FormaPagamento = "Cartão de Débito" });
+            comboBox.Items.Add(new Pagamento { FormaPagamento = "Cartão de Crédito" });
+            comboBox.Items.Add(new Pagamento { FormaPagamento = "PIX" });
+            comboBox.Items.Add(new Pagamento { FormaPagamento = "VR" });
+            comboBox.Items.Add(new Pagamento { FormaPagamento = "VA" });
+
+            comboBox.DisplayMember = "FormaPagamento";
+            comboBox.SelectedIndexChanged += comboBox_SelectedIndexChanged;
+            txtBox1.TextChanged += txtBox1_TextChanged;
+            txtViagem.CheckedChanged += txtViagem_CheckedChanged;
+        }
+
+        private class Pagamento
         {
             public string FormaPagamento { get; set; }
 
@@ -44,7 +61,7 @@ namespace Cantina_2._0
             }
         }
 
-        internal class Escolha
+        private class Escolha
         {
             private List<Pagamento> itens = new List<Pagamento>();
 
@@ -52,14 +69,12 @@ namespace Cantina_2._0
             {
                 itens.Add(pagamento);
             }
-            
 
             public List<Pagamento> ObterPagamentos()
             {
                 return itens;
             }
 
-            
         }
 
         public class Carrinho
@@ -127,13 +142,54 @@ namespace Cantina_2._0
             }
         }
 
+        private double CalcularTroco()
+        {
+            double valorPago = 0;
+            if (!double.TryParse(txtBox1.Text, out valorPago))
+            {
+                MessageBox.Show("Valor pago inválido ou insuficiente para cobrir o total.");
+                return 0;
+            }
+
+            double totalCompra = carrinho.Total();
+            double troco = valorPago - totalCompra;
+            return troco;
+        }
+
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
+            if (comboBox.SelectedItem is Pagamento pagamentoSelecionado)
+            {
+                double troco = CalcularTroco();
+                string dataHoraPedido = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+                string mensagem = $"Data e Hora: {dataHoraPedido}";
 
-            MessageBox.Show($"Total do pedido: R$ {carrinho.Total():F2}", "Pedido Finalizado");
-            carrinho.Limpar();
-            listBox2.Items.Clear();
-            AtualizarTotal();
+                if (troco > 0)
+                {
+                    txtBox2.Text = troco.ToString("F2");
+                    MessageBox.Show($"Cliente: {nomeCliente}\nTotal do pedido: R$ {carrinho.Total():F2}\nForma de pagamento: {pagamentoSelecionado.FormaPagamento}\nTroco: R${troco:F2}\n{mensagem}", "Pedido Finalizado");
+
+                    carrinho.Limpar();
+                    listBox2.Items.Clear();
+                    AtualizarTotal();
+                    comboBox.SelectedIndex = -1;
+
+                    lblAviso.Visible = false;
+                    lblAviso2.Visible = false;
+                    txtBox1.Visible = false;
+                    txtBox2.Visible = false;
+                    txtUsuário.Text = "";
+                    nomeCliente = "";
+                }
+                else if (troco < 0) 
+                {
+                    MessageBox.Show("Valor insuficiente!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecione uma forma de pagamento!", "Pagamento");
+            }
         }
 
         private void AtualizarTotal()
@@ -141,17 +197,30 @@ namespace Cantina_2._0
             lblTotal.Text = $"Total: R${carrinho.Total():F2}";
         }
 
-        private void numericQuantidade_Click(object sender, EventArgs e)
+        private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (comboBox.SelectedItem is Pagamento pagamentoSelecionado)
+            {
+                lblAviso.Visible = pagamentoSelecionado.FormaPagamento == "Dinheiro";
+                lblAviso2.Visible = pagamentoSelecionado.FormaPagamento == "Dinheiro";
+                txtBox1.Visible = pagamentoSelecionado.FormaPagamento == "Dinheiro";
+                txtBox2.Visible = pagamentoSelecionado.FormaPagamento == "Dinheiro";
+            }
         }
 
-        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void txtBox1_TextChanged(object sender, EventArgs e)
         {
-
+            CalcularTroco();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private string nomeCliente;
+
+        private void txtUsuário_TextChanged(object sender, EventArgs e)
+        {
+            nomeCliente = txtUsuário.Text;
+        }
+
+        private void txtViagem_CheckedChanged(object sender, EventArgs e)
         {
 
         }

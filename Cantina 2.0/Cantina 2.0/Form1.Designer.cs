@@ -43,6 +43,13 @@
             pictureBox3 = new PictureBox();
             comboBox = new ComboBox();
             label1 = new Label();
+            lblAviso = new Label();
+            lblAviso2 = new Label();
+            txtBox1 = new TextBox();
+            txtBox2 = new TextBox();
+            txtCliente = new Label();
+            txtUsuário = new TextBox();
+            txtViagem = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)btnQuantidade).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -88,11 +95,10 @@
             listBox2.Name = "listBox2";
             listBox2.Size = new Size(270, 154);
             listBox2.TabIndex = 5;
-            listBox2.SelectedIndexChanged += listBox2_SelectedIndexChanged;
             // 
             // btnAdicionar
             // 
-            btnAdicionar.Location = new Point(354, 190);
+            btnAdicionar.Location = new Point(354, 197);
             btnAdicionar.Name = "btnAdicionar";
             btnAdicionar.Size = new Size(75, 23);
             btnAdicionar.TabIndex = 6;
@@ -102,7 +108,7 @@
             // 
             // btnRemover
             // 
-            btnRemover.Location = new Point(354, 246);
+            btnRemover.Location = new Point(354, 240);
             btnRemover.Name = "btnRemover";
             btnRemover.Size = new Size(75, 23);
             btnRemover.TabIndex = 7;
@@ -123,7 +129,7 @@
             // 
             // btnFinalizar
             // 
-            btnFinalizar.Location = new Point(342, 365);
+            btnFinalizar.Location = new Point(349, 378);
             btnFinalizar.Name = "btnFinalizar";
             btnFinalizar.Size = new Size(104, 22);
             btnFinalizar.TabIndex = 9;
@@ -148,7 +154,6 @@
             numericQuantidade.Size = new Size(120, 19);
             numericQuantidade.TabIndex = 11;
             numericQuantidade.Text = "Quantidade:";
-            numericQuantidade.Click += numericQuantidade_Click;
             // 
             // pictureBox1
             // 
@@ -183,12 +188,11 @@
             // comboBox
             // 
             comboBox.FormattingEnabled = true;
-            comboBox.Items.AddRange(new object[] { "Crédito", "Débito", "Dinheiro" });
             comboBox.Location = new Point(152, 366);
             comboBox.Name = "comboBox";
             comboBox.Size = new Size(121, 23);
             comboBox.TabIndex = 15;
-            comboBox.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            comboBox.SelectedIndexChanged += comboBox_SelectedIndexChanged;
             // 
             // label1
             // 
@@ -200,12 +204,88 @@
             label1.TabIndex = 16;
             label1.Text = "Pagamento:";
             // 
+            // lblAviso
+            // 
+            lblAviso.AutoSize = true;
+            lblAviso.Font = new Font("Broadway", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblAviso.Location = new Point(321, 306);
+            lblAviso.Name = "lblAviso";
+            lblAviso.Size = new Size(46, 14);
+            lblAviso.TabIndex = 17;
+            lblAviso.Text = "Valor:";
+            lblAviso.Visible = false;
+            // 
+            // lblAviso2
+            // 
+            lblAviso2.AutoSize = true;
+            lblAviso2.Font = new Font("Broadway", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblAviso2.Location = new Point(320, 334);
+            lblAviso2.Name = "lblAviso2";
+            lblAviso2.Size = new Size(47, 14);
+            lblAviso2.TabIndex = 18;
+            lblAviso2.Text = "Troco:";
+            lblAviso2.Visible = false;
+            // 
+            // txtBox1
+            // 
+            txtBox1.Location = new Point(373, 297);
+            txtBox1.Name = "txtBox1";
+            txtBox1.Size = new Size(80, 23);
+            txtBox1.TabIndex = 19;
+            txtBox1.Visible = false;
+            txtBox1.TextChanged += txtBox1_TextChanged;
+            // 
+            // txtBox2
+            // 
+            txtBox2.Location = new Point(374, 330);
+            txtBox2.Name = "txtBox2";
+            txtBox2.Size = new Size(79, 23);
+            txtBox2.TabIndex = 20;
+            txtBox2.Visible = false;
+            // 
+            // txtCliente
+            // 
+            txtCliente.AutoSize = true;
+            txtCliente.Font = new Font("Broadway", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCliente.Location = new Point(298, 149);
+            txtCliente.Name = "txtCliente";
+            txtCliente.Size = new Size(56, 14);
+            txtCliente.TabIndex = 21;
+            txtCliente.Text = "Cliente:";
+            // 
+            // txtUsuário
+            // 
+            txtUsuário.Location = new Point(360, 145);
+            txtUsuário.Name = "txtUsuário";
+            txtUsuário.Size = new Size(100, 23);
+            txtUsuário.TabIndex = 22;
+            txtUsuário.TextChanged += txtUsuário_TextChanged;
+            // 
+            // txtViagem
+            // 
+            txtViagem.AutoSize = true;
+            txtViagem.Font = new Font("Broadway", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtViagem.Location = new Point(86, 406);
+            txtViagem.Name = "txtViagem";
+            txtViagem.Size = new Size(138, 23);
+            txtViagem.TabIndex = 23;
+            txtViagem.Text = "Para viagem";
+            txtViagem.UseVisualStyleBackColor = true;
+            txtViagem.CheckedChanged += txtViagem_CheckedChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(230, 255, 0);
             ClientSize = new Size(800, 450);
+            Controls.Add(txtViagem);
+            Controls.Add(txtUsuário);
+            Controls.Add(txtCliente);
+            Controls.Add(txtBox2);
+            Controls.Add(txtBox1);
+            Controls.Add(lblAviso2);
+            Controls.Add(lblAviso);
             Controls.Add(label1);
             Controls.Add(comboBox);
             Controls.Add(pictureBox3);
@@ -248,5 +328,12 @@
         private PictureBox pictureBox3;
         private ComboBox comboBox;
         private Label label1;
+        private Label lblAviso;
+        private Label lblAviso2;
+        private TextBox txtBox1;
+        private TextBox txtBox2;
+        private Label txtCliente;
+        private TextBox txtUsuário;
+        private CheckBox txtViagem;
     }
 }
