@@ -271,7 +271,6 @@
             txtViagem.TabIndex = 23;
             txtViagem.Text = "Para viagem";
             txtViagem.UseVisualStyleBackColor = true;
-            txtViagem.CheckedChanged += txtViagem_CheckedChanged;
             // 
             // Form1
             // 

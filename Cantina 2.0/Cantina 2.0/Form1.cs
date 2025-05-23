@@ -48,7 +48,7 @@ namespace Cantina_2._0
             comboBox.DisplayMember = "FormaPagamento";
             comboBox.SelectedIndexChanged += comboBox_SelectedIndexChanged;
             txtBox1.TextChanged += txtBox1_TextChanged;
-            txtViagem.CheckedChanged += txtViagem_CheckedChanged;
+            //txtViagem.CheckedChanged += txtViagem_CheckedChanged;
         }
 
         private class Pagamento
@@ -158,39 +158,63 @@ namespace Cantina_2._0
 
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(nomeCliente))
+            {
+                MessageBox.Show("Por favor, informe o nome do cliente antes de finalizar o pedido!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (comboBox.SelectedItem is Pagamento pagamentoSelecionado)
             {
-                double troco = CalcularTroco();
+                double troco = 0;
+
+                // Apenas calcula o troco se a forma de pagamento for dinheiro
+                if (pagamentoSelecionado.FormaPagamento == "Dinheiro")
+                {
+                    troco = CalcularTroco();
+
+                    if (troco < 0)
+                    {
+                        MessageBox.Show("Valor insuficiente!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    txtBox2.Text = troco.ToString("F2");
+                }
+
                 string dataHoraPedido = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
                 string mensagem = $"Data e Hora: {dataHoraPedido}";
+                string viagemInfo = txtViagem.Checked ? "Pedido para viagem." : "Pedido para consumo no local.";
 
-                if (troco > 0)
-                {
-                    txtBox2.Text = troco.ToString("F2");
-                    MessageBox.Show($"Cliente: {nomeCliente}\nTotal do pedido: R$ {carrinho.Total():F2}\nForma de pagamento: {pagamentoSelecionado.FormaPagamento}\nTroco: R${troco:F2}\n{mensagem}", "Pedido Finalizado");
+                // Criando uma única mensagem com todas as informações
+                string mensagemFinal = $"Cliente: {nomeCliente}\n" +
+                                       $"Total do pedido: R$ {carrinho.Total():F2}\n" +
+                                       $"Forma de pagamento: {pagamentoSelecionado.FormaPagamento}\n" +
+                                       (pagamentoSelecionado.FormaPagamento == "Dinheiro" ? $"Troco: R${troco:F2}\n" : "") +
+                                       $"{mensagem}\n" +
+                                       $"{viagemInfo}";
 
-                    carrinho.Limpar();
-                    listBox2.Items.Clear();
-                    AtualizarTotal();
-                    comboBox.SelectedIndex = -1;
+                MessageBox.Show(mensagemFinal, "Pedido Finalizado");
 
-                    lblAviso.Visible = false;
-                    lblAviso2.Visible = false;
-                    txtBox1.Visible = false;
-                    txtBox2.Visible = false;
-                    txtUsuário.Text = "";
-                    nomeCliente = "";
-                }
-                else if (troco < 0) 
-                {
-                    MessageBox.Show("Valor insuficiente!");
-                }
+                // Limpeza do carrinho e reset dos campos após finalização
+                carrinho.Limpar();
+                listBox2.Items.Clear();
+                AtualizarTotal();
+                comboBox.SelectedIndex = -1;
+
+                lblAviso.Visible = false;
+                lblAviso2.Visible = false;
+                txtBox1.Visible = false;
+                txtBox2.Visible = false;
+                txtUsuário.Text = "";
+                nomeCliente = "";
             }
             else
             {
-                MessageBox.Show("Por favor, selecione uma forma de pagamento!", "Pagamento");
+                MessageBox.Show("Por favor, selecione uma forma de pagamento!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
 
         private void AtualizarTotal()
         {
@@ -210,7 +234,7 @@ namespace Cantina_2._0
 
         private void txtBox1_TextChanged(object sender, EventArgs e)
         {
-            CalcularTroco();
+           // CalcularTroco();
         }
 
         private string nomeCliente;
@@ -218,11 +242,6 @@ namespace Cantina_2._0
         private void txtUsuário_TextChanged(object sender, EventArgs e)
         {
             nomeCliente = txtUsuário.Text;
-        }
-
-        private void txtViagem_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
