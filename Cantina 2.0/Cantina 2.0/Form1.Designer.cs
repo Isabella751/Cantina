@@ -50,6 +50,7 @@
             txtCliente = new Label();
             txtUsuário = new TextBox();
             txtViagem = new CheckBox();
+            btnBalcao = new Button();
             ((System.ComponentModel.ISupportInitialize)btnQuantidade).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -60,10 +61,10 @@
             // 
             txtProdutos.AutoSize = true;
             txtProdutos.BackColor = Color.FromArgb(230, 255, 0);
-            txtProdutos.Font = new Font("Broadway", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtProdutos.Font = new Font("Inter SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtProdutos.Location = new Point(110, 107);
             txtProdutos.Name = "txtProdutos";
-            txtProdutos.Size = new Size(65, 14);
+            txtProdutos.Size = new Size(75, 22);
             txtProdutos.TabIndex = 2;
             txtProdutos.Text = "Produtos";
             // 
@@ -71,10 +72,10 @@
             // 
             txtCarrinho.AutoSize = true;
             txtCarrinho.BackColor = Color.FromArgb(230, 255, 0);
-            txtCarrinho.Font = new Font("Broadway", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCarrinho.Font = new Font("Inter SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtCarrinho.Location = new Point(606, 107);
             txtCarrinho.Name = "txtCarrinho";
-            txtCarrinho.Size = new Size(64, 14);
+            txtCarrinho.Size = new Size(73, 22);
             txtCarrinho.TabIndex = 3;
             txtCarrinho.Text = "Carrinho";
             // 
@@ -95,6 +96,7 @@
             listBox2.Name = "listBox2";
             listBox2.Size = new Size(270, 154);
             listBox2.TabIndex = 5;
+            listBox2.SelectedIndexChanged += listBox2_SelectedIndexChanged;
             // 
             // btnAdicionar
             // 
@@ -120,10 +122,10 @@
             // 
             lblTotal.AutoSize = true;
             lblTotal.BackColor = Color.FromArgb(230, 255, 0);
-            lblTotal.Font = new Font("Broadway", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTotal.Location = new Point(563, 322);
+            lblTotal.Font = new Font("Inter SemiBold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotal.Location = new Point(561, 306);
             lblTotal.Name = "lblTotal";
-            lblTotal.Size = new Size(107, 22);
+            lblTotal.Size = new Size(118, 35);
             lblTotal.TabIndex = 8;
             lblTotal.Text = "Total: R$";
             // 
@@ -148,10 +150,10 @@
             // 
             numericQuantidade.AutoSize = true;
             numericQuantidade.BackColor = Color.FromArgb(230, 255, 0);
-            numericQuantidade.Font = new Font("Broadway", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            numericQuantidade.Location = new Point(26, 330);
+            numericQuantidade.Font = new Font("Inter SemiBold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            numericQuantidade.Location = new Point(21, 322);
             numericQuantidade.Name = "numericQuantidade";
-            numericQuantidade.Size = new Size(120, 19);
+            numericQuantidade.Size = new Size(126, 27);
             numericQuantidade.TabIndex = 11;
             numericQuantidade.Text = "Quantidade:";
             // 
@@ -197,20 +199,20 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Broadway", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(26, 365);
+            label1.Font = new Font("Inter SemiBold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(23, 362);
             label1.Name = "label1";
-            label1.Size = new Size(115, 19);
+            label1.Size = new Size(123, 27);
             label1.TabIndex = 16;
             label1.Text = "Pagamento:";
             // 
             // lblAviso
             // 
             lblAviso.AutoSize = true;
-            lblAviso.Font = new Font("Broadway", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblAviso.Location = new Point(321, 306);
+            lblAviso.Font = new Font("Inter SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblAviso.Location = new Point(314, 295);
             lblAviso.Name = "lblAviso";
-            lblAviso.Size = new Size(46, 14);
+            lblAviso.Size = new Size(53, 22);
             lblAviso.TabIndex = 17;
             lblAviso.Text = "Valor:";
             lblAviso.Visible = false;
@@ -218,10 +220,10 @@
             // lblAviso2
             // 
             lblAviso2.AutoSize = true;
-            lblAviso2.Font = new Font("Broadway", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblAviso2.Location = new Point(320, 334);
+            lblAviso2.Font = new Font("Inter SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblAviso2.Location = new Point(311, 331);
             lblAviso2.Name = "lblAviso2";
-            lblAviso2.Size = new Size(47, 14);
+            lblAviso2.Size = new Size(57, 22);
             lblAviso2.TabIndex = 18;
             lblAviso2.Text = "Troco:";
             lblAviso2.Visible = false;
@@ -246,10 +248,10 @@
             // txtCliente
             // 
             txtCliente.AutoSize = true;
-            txtCliente.Font = new Font("Broadway", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtCliente.Location = new Point(298, 149);
+            txtCliente.Font = new Font("Inter SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtCliente.Location = new Point(288, 143);
             txtCliente.Name = "txtCliente";
-            txtCliente.Size = new Size(56, 14);
+            txtCliente.Size = new Size(66, 22);
             txtCliente.TabIndex = 21;
             txtCliente.Text = "Cliente:";
             // 
@@ -264,13 +266,23 @@
             // txtViagem
             // 
             txtViagem.AutoSize = true;
-            txtViagem.Font = new Font("Broadway", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtViagem.Font = new Font("Inter SemiBold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtViagem.Location = new Point(86, 406);
             txtViagem.Name = "txtViagem";
-            txtViagem.Size = new Size(138, 23);
+            txtViagem.Size = new Size(145, 31);
             txtViagem.TabIndex = 23;
             txtViagem.Text = "Para viagem";
             txtViagem.UseVisualStyleBackColor = true;
+            // 
+            // btnBalcao
+            // 
+            btnBalcao.Location = new Point(324, 414);
+            btnBalcao.Name = "btnBalcao";
+            btnBalcao.Size = new Size(156, 23);
+            btnBalcao.TabIndex = 24;
+            btnBalcao.Text = "Balcão de pedidos";
+            btnBalcao.UseVisualStyleBackColor = true;
+            btnBalcao.Click += btnBalcao_Click;
             // 
             // Form1
             // 
@@ -278,6 +290,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(230, 255, 0);
             ClientSize = new Size(800, 450);
+            Controls.Add(btnBalcao);
             Controls.Add(txtViagem);
             Controls.Add(txtUsuário);
             Controls.Add(txtCliente);
@@ -334,5 +347,6 @@
         private Label txtCliente;
         private TextBox txtUsuário;
         private CheckBox txtViagem;
+        private Button btnBalcao;
     }
 }

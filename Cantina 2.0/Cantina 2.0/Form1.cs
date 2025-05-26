@@ -7,12 +7,14 @@ namespace Cantina_2._0
 {
     public partial class Form1 : Form
     {
+        public static Form1 Instance;
 
         private List<Produto> produtos;
         private Carrinho carrinho;
         public Form1()
         {
             InitializeComponent();
+            Instance = this;
             carrinho = new Carrinho();
             produtos = new List<Produto>();
             listBox1.DisplayMember = "Nome";
@@ -73,31 +75,6 @@ namespace Cantina_2._0
             public List<Pagamento> ObterPagamentos()
             {
                 return itens;
-            }
-
-        }
-
-        public class Carrinho
-        {
-            private List<Produto> itens = new List<Produto>();
-
-
-            public void Adicionar(Produto produto) => itens.Add(produto);
-            public void Remover(Produto produto) => itens.Remove(produto);
-            public double Total() => itens.Sum(p => p.Preco);
-            public List<Produto> Listar() => new List<Produto>(itens);
-            public void Limpar() => itens.Clear();
-        }
-
-        public class Produto
-        {
-            public string Nome { get; set; }
-            public double Preco { get; set; }
-            public int Quantidade { get; set; }
-            public double total => Preco * Quantidade;
-            public override string ToString()
-            {
-                return $"{Quantidade}x - {Nome} - R${Preco:F2}";
             }
 
         }
@@ -168,9 +145,14 @@ namespace Cantina_2._0
             {
                 double troco = 0;
 
-                // Apenas calcula o troco se a forma de pagamento for dinheiro
                 if (pagamentoSelecionado.FormaPagamento == "Dinheiro")
                 {
+                    if (string.IsNullOrWhiteSpace(txtBox1.Text) || !double.TryParse(txtBox1.Text, out double valorPago))
+                    {
+                        MessageBox.Show("Por favor, informe um valor válido para o pagamento em dinheiro!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
                     troco = CalcularTroco();
 
                     if (troco < 0)
@@ -186,8 +168,15 @@ namespace Cantina_2._0
                 string mensagem = $"Data e Hora: {dataHoraPedido}";
                 string viagemInfo = txtViagem.Checked ? "Pedido para viagem." : "Pedido para consumo no local.";
 
-                // Criando uma única mensagem com todas as informações
-                string mensagemFinal = $"Cliente: {nomeCliente}\n" +
+                string listaPedidos = "";
+                foreach (var item in listBox2.Items)
+                {
+                    listaPedidos += item.ToString() + "\n";
+                }
+
+                string mensagemFinal = $"           ***Extrato da compra***\n" +
+                                       $"Cliente: {nomeCliente}\n" +
+                                       $"{listaPedidos}" +
                                        $"Total do pedido: R$ {carrinho.Total():F2}\n" +
                                        $"Forma de pagamento: {pagamentoSelecionado.FormaPagamento}\n" +
                                        (pagamentoSelecionado.FormaPagamento == "Dinheiro" ? $"Troco: R${troco:F2}\n" : "") +
@@ -196,7 +185,7 @@ namespace Cantina_2._0
 
                 MessageBox.Show(mensagemFinal, "Pedido Finalizado");
 
-                // Limpeza do carrinho e reset dos campos após finalização
+
                 carrinho.Limpar();
                 listBox2.Items.Clear();
                 AtualizarTotal();
@@ -234,7 +223,7 @@ namespace Cantina_2._0
 
         private void txtBox1_TextChanged(object sender, EventArgs e)
         {
-           // CalcularTroco();
+            // CalcularTroco();
         }
 
         private string nomeCliente;
@@ -242,6 +231,17 @@ namespace Cantina_2._0
         private void txtUsuário_TextChanged(object sender, EventArgs e)
         {
             nomeCliente = txtUsuário.Text;
+        }
+
+        private void btnBalcao_Click(object sender, EventArgs e)
+        {
+            Balcao minhaNovaJanela = new Balcao(this);
+            minhaNovaJanela.Show();
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
