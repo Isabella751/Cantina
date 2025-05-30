@@ -2,19 +2,18 @@ using System.Drawing.Text;
 using System.Reflection.Metadata.Ecma335;
 using System.Windows.Forms;
 using static Cantina_2._0.Form1;
+using static Cantina_2._0.PersistenciaPedido;
 
 namespace Cantina_2._0
 {
     public partial class Form1 : Form
     {
-        public static Form1 Instance;
 
         private List<Produto> produtos;
         private Carrinho carrinho;
         public Form1()
         {
             InitializeComponent();
-            Instance = this;
             carrinho = new Carrinho();
             produtos = new List<Produto>();
             listBox1.DisplayMember = "Nome";
@@ -162,10 +161,26 @@ namespace Cantina_2._0
                     }
 
                     txtBox2.Text = troco.ToString("F2");
+
                 }
 
-                Extrato extrato = new Extrato();
-                //extrato.GerarExtrato(this);
+                var pedido = new Pedido
+                {
+                    NomeCliente = nomeCliente,
+                    Itens = new List<Produto>(carrinho.Listar()),
+                    FormaPagamento = pagamentoSelecionado.FormaPagamento,
+                    Total = carrinho.Total(),
+                    Troco = pagamentoSelecionado.FormaPagamento == "Dinheiro" ? troco : (double?)null,
+                    ParaViagem = txtViagem.Checked,
+                    DataHora = DateTime.Now
+                };
+
+                // Adiciona o pedido na lista central
+                PedidoRepository.AdicionarPedido(pedido);
+
+                // Mostra o resumo
+                MessageBox.Show(pedido.ToString(), "Pedido finalizado");
+
 
 
                 carrinho.Limpar();
@@ -184,6 +199,7 @@ namespace Cantina_2._0
             {
                 MessageBox.Show("Por favor, selecione uma forma de pagamento!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
         }
 
 
@@ -217,8 +233,8 @@ namespace Cantina_2._0
 
         private void btnBalcao_Click(object sender, EventArgs e)
         {
-            Balcao novaJanela = new Balcao(this);
-            novaJanela.Show();
+            Balcao minhaNovaJanela = new Balcao();
+            minhaNovaJanela.Show();
         }
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
