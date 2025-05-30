@@ -39,7 +39,7 @@
             // 
             listPedidosBal.FormattingEnabled = true;
             listPedidosBal.ItemHeight = 15;
-            listPedidosBal.Location = new Point(33, 59);
+            listPedidosBal.Location = new Point(112, 34);
             listPedidosBal.Name = "listPedidosBal";
             listPedidosBal.Size = new Size(599, 169);
             listPedidosBal.TabIndex = 0;
@@ -49,7 +49,7 @@
             // 
             listEntreguesBal.FormattingEnabled = true;
             listEntreguesBal.ItemHeight = 15;
-            listEntreguesBal.Location = new Point(33, 274);
+            listEntreguesBal.Location = new Point(112, 284);
             listEntreguesBal.Name = "listEntreguesBal";
             listEntreguesBal.Size = new Size(599, 154);
             listEntreguesBal.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Inter SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(33, 23);
+            label1.Location = new Point(385, 9);
             label1.Name = "label1";
             label1.Size = new Size(68, 22);
             label1.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Inter SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(33, 240);
+            label2.Location = new Point(352, 249);
             label2.Name = "label2";
             label2.Size = new Size(145, 22);
             label2.TabIndex = 3;
@@ -76,7 +76,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(680, 134);
+            button1.Location = new Point(385, 214);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 4;

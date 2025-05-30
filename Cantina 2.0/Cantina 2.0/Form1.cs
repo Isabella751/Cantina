@@ -164,26 +164,8 @@ namespace Cantina_2._0
                     txtBox2.Text = troco.ToString("F2");
                 }
 
-                string dataHoraPedido = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
-                string mensagem = $"Data e Hora: {dataHoraPedido}";
-                string viagemInfo = txtViagem.Checked ? "Pedido para viagem." : "Pedido para consumo no local.";
-
-                string listaPedidos = "";
-                foreach (var item in listBox2.Items)
-                {
-                    listaPedidos += item.ToString() + "\n";
-                }
-
-                string mensagemFinal = $"           ***Extrato da compra***\n" +
-                                       $"Cliente: {nomeCliente}\n" +
-                                       $"{listaPedidos}" +
-                                       $"Total do pedido: R$ {carrinho.Total():F2}\n" +
-                                       $"Forma de pagamento: {pagamentoSelecionado.FormaPagamento}\n" +
-                                       (pagamentoSelecionado.FormaPagamento == "Dinheiro" ? $"Troco: R${troco:F2}\n" : "") +
-                                       $"{mensagem}\n" +
-                                       $"{viagemInfo}";
-
-                MessageBox.Show(mensagemFinal, "Pedido Finalizado");
+                Extrato extrato = new Extrato();
+                //extrato.GerarExtrato(this);
 
 
                 carrinho.Limpar();
@@ -235,8 +217,8 @@ namespace Cantina_2._0
 
         private void btnBalcao_Click(object sender, EventArgs e)
         {
-            Balcao minhaNovaJanela = new Balcao(this);
-            minhaNovaJanela.Show();
+            Balcao novaJanela = new Balcao(this);
+            novaJanela.Show();
         }
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
