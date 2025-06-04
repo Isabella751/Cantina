@@ -1,3 +1,4 @@
+using System.Drawing;
 using System.Drawing.Text;
 using System.Reflection.Metadata.Ecma335;
 using System.Windows.Forms;
@@ -175,11 +176,10 @@ namespace Cantina_2._0
                     DataHora = DateTime.Now
                 };
 
-                // Adiciona o pedido na lista central
-                PedidoRepository.AdicionarPedido(pedido);
+                GerenciadorPedidos.Instancia.AdicionarPedido(pedido);
 
-                // Mostra o resumo
                 MessageBox.Show(pedido.ToString(), "Pedido finalizado");
+                btnQuantidade.Value = btnQuantidade.Minimum;
 
 
 

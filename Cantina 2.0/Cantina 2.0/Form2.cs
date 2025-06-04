@@ -14,23 +14,31 @@ namespace Cantina_2._0
 {
     public partial class Balcao : Form
     {
-        //private Carrinho carrinho;
         public Balcao()
         {
             InitializeComponent();
+            listPedidos.DisplayMember = ("outroresumo");
+            
+            GerenciadorPedidos.Instancia.PedidoAdicionado += GerenciadorPedidos_PedidoAdicionado;
+            AtualizarListaPedidos();
+        }
+        private void GerenciadorPedidos_PedidoAdicionado(object sender, Pedido pedido)
+        {
+            listPedidos.Items.Add(pedido);
+        }
+        private void AtualizarListaPedidos()
+        {
+            listPedidos.Items.Clear();
+            foreach (var pedido in GerenciadorPedidos.Instancia.ObterPedidos())
+            {
+                listPedidos.Items.Add(pedido);
+            }
         }
 
         private void listPedidos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /*int index = listBox2.SelectedIndex;
-
-            if (index >= 0)
-            {
-                var todosPedidos = PedidoRepository.ObterTodos();
-                var pedidoSelecionado = todosPedidos[index];
-
-                MessageBox.Show(pedidoSelecionado.ToString(), "Detalhes do Pedido");*/
-            }
+            
         }
     }
+}
 

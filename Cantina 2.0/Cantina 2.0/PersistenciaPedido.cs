@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,32 +9,6 @@ namespace Cantina_2._0
 {
     internal class PersistenciaPedido
     {
-        public static class PedidoRepository
-        {
-            // Lista central de pedidos
-            private static readonly List<Pedido> pedidos = new List<Pedido>();
-
-            // Adiciona um novo pedido
-            public static void AdicionarPedido(Pedido pedido)
-            {
-                if (pedido != null)
-                {
-                    pedidos.Add(pedido);
-                }
-            }
-
-            // Retorna todos os pedidos
-            public static List<Pedido> ObterTodos()
-            {
-                return new List<Pedido>(pedidos); // Retorna uma cópia para segurança
-            }
-
-            // Limpa todos os pedidos
-            public static void Limpar()
-            {
-                pedidos.Clear();
-            }
-        }
 
         public class Pedido
         {
@@ -66,8 +41,55 @@ namespace Cantina_2._0
 
                 return resumo;
             }
+
+            public string ResumoCompacto()
+            {
+                string outroresumo = $"Cliente: {NomeCliente} - Itens: ";
+
+                foreach (var item in Itens)
+                {
+                    outroresumo += $" {item.Quantidade}x {item.Nome}, ";
+                }
+
+                if (outroresumo.EndsWith(", "))
+                {
+                    outroresumo = outroresumo.Substring(0, outroresumo.Length - 2);
+                }
+
+                return outroresumo;
+            }
+
         }
 
-
+        public class GerenciadorPedidos
+        {
+            private static GerenciadorPedidos _instancia;
+            private List<Pedido> _pedidos;
+            private GerenciadorPedidos()
+            {
+                _pedidos = new List<Pedido>();
+            }
+            public static GerenciadorPedidos Instancia
+            {
+                get
+                {
+                    if (_instancia == null)
+                    {
+                        _instancia = new GerenciadorPedidos();
+                    }
+                    return _instancia;
+                }
+            }
+            public void AdicionarPedido(Pedido pedido)
+            {
+                _pedidos.Add(pedido);
+                PedidoAdicionado?.Invoke(this, pedido);
+            }
+            public List<Pedido> ObterPedidos()
+            {
+                return _pedidos;
+            }
+            public event EventHandler<Pedido> PedidoAdicionado;
+        }
     }
 }
