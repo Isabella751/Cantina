@@ -8,16 +8,14 @@ namespace Cantina_2._0
 {
     internal class Produto
     {
-        public string Nome { get; set; }
+            public string Nome { get; set; }
             public double Preco { get; set; }
             public int Quantidade { get; set; }
             public double total => Preco * Quantidade;
-        public override string ToString()
+            public override string ToString()
 
             {
                 return $"{Quantidade}x - {Nome} - R${Preco:F2}";
             }
-
-        }
     }
-
+}

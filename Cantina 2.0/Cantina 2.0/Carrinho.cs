@@ -10,7 +10,6 @@ namespace Cantina_2._0
     {
             private List<Produto> itens = new List<Produto>();
 
-
             public void Adicionar(Produto produto) => itens.Add(produto);
             public void Remover(Produto produto) => itens.Remove(produto);
             public double Total() => itens.Sum(p => p.Preco);
@@ -18,4 +17,3 @@ namespace Cantina_2._0
             public void Limpar() => itens.Clear();
         }
     }
-

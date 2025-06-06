@@ -43,6 +43,7 @@
             btnEntregar.TabIndex = 0;
             btnEntregar.Text = "Entregar";
             btnEntregar.UseVisualStyleBackColor = true;
+            btnEntregar.Click += btnEntregar_Click;
             // 
             // listPedidos
             // 

@@ -18,7 +18,7 @@ namespace Cantina_2._0
         {
             InitializeComponent();
             listPedidos.DisplayMember = ("outroresumo");
-            
+
             GerenciadorPedidos.Instancia.PedidoAdicionado += GerenciadorPedidos_PedidoAdicionado;
             AtualizarListaPedidos();
         }
@@ -37,8 +37,12 @@ namespace Cantina_2._0
 
         private void listPedidos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void btnEntregar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
-

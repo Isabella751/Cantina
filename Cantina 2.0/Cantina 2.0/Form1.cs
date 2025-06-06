@@ -9,7 +9,6 @@ namespace Cantina_2._0
 {
     public partial class Form1 : Form
     {
-
         private List<Produto> produtos;
         private Carrinho carrinho;
         public Form1()
@@ -36,10 +35,8 @@ namespace Cantina_2._0
 
             Form1_Load(null, null);
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
-
             comboBox.Items.Add(new Pagamento { FormaPagamento = "Dinheiro" });
             comboBox.Items.Add(new Pagamento { FormaPagamento = "Cartão de Débito" });
             comboBox.Items.Add(new Pagamento { FormaPagamento = "Cartão de Crédito" });
@@ -76,7 +73,6 @@ namespace Cantina_2._0
             {
                 return itens;
             }
-
         }
 
         private void btnAdicionar_Click(object sender, EventArgs e)
@@ -162,7 +158,6 @@ namespace Cantina_2._0
                     }
 
                     txtBox2.Text = troco.ToString("F2");
-
                 }
 
                 var pedido = new Pedido
@@ -177,12 +172,9 @@ namespace Cantina_2._0
                 };
 
                 GerenciadorPedidos.Instancia.AdicionarPedido(pedido);
+                MessageBox.Show(pedido.ResumoDetalhado(), "Pedido finalizado");
 
-                MessageBox.Show(pedido.ToString(), "Pedido finalizado");
                 btnQuantidade.Value = btnQuantidade.Minimum;
-
-
-
                 carrinho.Limpar();
                 listBox2.Items.Clear();
                 AtualizarTotal();
@@ -199,9 +191,7 @@ namespace Cantina_2._0
             {
                 MessageBox.Show("Por favor, selecione uma forma de pagamento!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
         }
-
 
         private void AtualizarTotal()
         {

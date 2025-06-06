@@ -9,7 +9,6 @@ namespace Cantina_2._0
 {
     internal class PersistenciaPedido
     {
-
         public class Pedido
         {
             public string NomeCliente { get; set; }
@@ -22,43 +21,35 @@ namespace Cantina_2._0
 
             public override string ToString()
             {
+                string resumo = $"Cliente: {NomeCliente} -- Itens: ";
+                foreach (var item in Itens)
+                {
+                    resumo += $" {item.Quantidade}x {item.Nome}, ";
+                }
+                if (resumo.EndsWith(", "))
+                {
+                    resumo = resumo.Substring(0, resumo.Length - 2);
+                }
+                resumo += $" -- Para viagem: {(ParaViagem ? "sim" : "não")}";
+                return resumo;
+            }
+
+            public string ResumoDetalhado()
+            {
                 string resumo = $"Nome do cliente: {NomeCliente}\n";
                 resumo += "Itens do pedido:\n";
-
                 foreach (var item in Itens)
                 {
                     resumo += $"- {item.Quantidade}x {item.Nome} = R${item.Preco:F2}\n";
                 }
-
                 resumo += $"\nTotal: R${Total:F2}\n";
                 resumo += $"Forma de pagamento: {FormaPagamento}\n";
-
                 if (Troco.HasValue)
                     resumo += $"Troco: R${Troco.Value:F2}\n";
-
                 resumo += $"Pedido para {(ParaViagem ? "viagem" : "comer no local")}\n";
                 resumo += $"Data e Hora: {DataHora:dd/MM/yyyy HH:mm:ss}\n";
-
                 return resumo;
             }
-
-            public string ResumoCompacto()
-            {
-                string outroresumo = $"Cliente: {NomeCliente} - Itens: ";
-
-                foreach (var item in Itens)
-                {
-                    outroresumo += $" {item.Quantidade}x {item.Nome}, ";
-                }
-
-                if (outroresumo.EndsWith(", "))
-                {
-                    outroresumo = outroresumo.Substring(0, outroresumo.Length - 2);
-                }
-
-                return outroresumo;
-            }
-
         }
 
         public class GerenciadorPedidos
