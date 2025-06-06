@@ -162,7 +162,7 @@
             pictureBox1.Image = Properties.Resources.bolt_logo;
             pictureBox1.Location = new Point(277, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(235, 82);
+            pictureBox1.Size = new Size(235, 124);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 12;
             pictureBox1.TabStop = false;

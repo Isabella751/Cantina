@@ -48,6 +48,7 @@
             // listPedidos
             // 
             listPedidos.FormattingEnabled = true;
+            listPedidos.HorizontalScrollbar = true;
             listPedidos.ItemHeight = 15;
             listPedidos.Location = new Point(107, 42);
             listPedidos.Name = "listPedidos";
@@ -58,6 +59,7 @@
             // listEntregues
             // 
             listEntregues.FormattingEnabled = true;
+            listEntregues.HorizontalScrollbar = true;
             listEntregues.ItemHeight = 15;
             listEntregues.Location = new Point(107, 261);
             listEntregues.Name = "listEntregues";

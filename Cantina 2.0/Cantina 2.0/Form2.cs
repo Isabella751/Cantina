@@ -42,7 +42,11 @@ namespace Cantina_2._0
 
         private void btnEntregar_Click(object sender, EventArgs e)
         {
-
+            if (listPedidos.SelectedItem != null)
+            {
+                listEntregues.Items.Add(listPedidos.SelectedItem);
+                listPedidos.Items.Remove(listPedidos.SelectedItem);
+            }
         }
     }
 }
