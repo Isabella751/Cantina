@@ -17,3 +17,22 @@ C:\Users\25165046\Desktop\Git projetos\Cantina\Cantina 2.0\Cantina 2.0\obj\Debug
 C:\Users\25165046\Desktop\Git projetos\Cantina\Cantina 2.0\Cantina 2.0\obj\Debug\net8.0-windows\Cantina 2.0.genruntimeconfig.cache
 C:\Users\25165046\Desktop\Git projetos\Cantina\Cantina 2.0\Cantina 2.0\obj\Debug\net8.0-windows\ref\Cantina 2.0.dll
 C:\Users\25165046\Desktop\Git projetos\Cantina\Cantina 2.0\Cantina 2.0\obj\Debug\net8.0-windows\Cantina_2._0.Balcao.resources
+C:\Users\isabe\OneDrive\Área de Trabalho\Git projetos\Cantina 10.0\Cantina\Cantina 2.0\Cantina 2.0\bin\Debug\net8.0-windows\Cantina 2.0.exe
+C:\Users\isabe\OneDrive\Área de Trabalho\Git projetos\Cantina 10.0\Cantina\Cantina 2.0\Cantina 2.0\bin\Debug\net8.0-windows\Cantina 2.0.deps.json
+C:\Users\isabe\OneDrive\Área de Trabalho\Git projetos\Cantina 10.0\Cantina\Cantina 2.0\Cantina 2.0\bin\Debug\net8.0-windows\Cantina 2.0.runtimeconfig.json
+C:\Users\isabe\OneDrive\Área de Trabalho\Git projetos\Cantina 10.0\Cantina\Cantina 2.0\Cantina 2.0\bin\Debug\net8.0-windows\Cantina 2.0.dll
+C:\Users\isabe\OneDrive\Área de Trabalho\Git projetos\Cantina 10.0\Cantina\Cantina 2.0\Cantina 2.0\bin\Debug\net8.0-windows\Cantina 2.0.pdb
+C:\Users\isabe\OneDrive\Área de Trabalho\Git projetos\Cantina 10.0\Cantina\Cantina 2.0\Cantina 2.0\obj\Debug\net8.0-windows\Cantina_2._0.Form1.resources
+C:\Users\isabe\OneDrive\Área de Trabalho\Git projetos\Cantina 10.0\Cantina\Cantina 2.0\Cantina 2.0\obj\Debug\net8.0-windows\Cantina_2._0.Balcao.resources
+C:\Users\isabe\OneDrive\Área de Trabalho\Git projetos\Cantina 10.0\Cantina\Cantina 2.0\Cantina 2.0\obj\Debug\net8.0-windows\Cantina_2._0.Properties.Resources.resources
+C:\Users\isabe\OneDrive\Área de Trabalho\Git projetos\Cantina 10.0\Cantina\Cantina 2.0\Cantina 2.0\obj\Debug\net8.0-windows\Cantina 2.0.csproj.GenerateResource.cache
+C:\Users\isabe\OneDrive\Área de Trabalho\Git projetos\Cantina 10.0\Cantina\Cantina 2.0\Cantina 2.0\obj\Debug\net8.0-windows\Cantina 2.0.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\isabe\OneDrive\Área de Trabalho\Git projetos\Cantina 10.0\Cantina\Cantina 2.0\Cantina 2.0\obj\Debug\net8.0-windows\Cantina 2.0.AssemblyInfoInputs.cache
+C:\Users\isabe\OneDrive\Área de Trabalho\Git projetos\Cantina 10.0\Cantina\Cantina 2.0\Cantina 2.0\obj\Debug\net8.0-windows\Cantina 2.0.AssemblyInfo.cs
+C:\Users\isabe\OneDrive\Área de Trabalho\Git projetos\Cantina 10.0\Cantina\Cantina 2.0\Cantina 2.0\obj\Debug\net8.0-windows\Cantina 2.0.csproj.CoreCompileInputs.cache
+C:\Users\isabe\OneDrive\Área de Trabalho\Git projetos\Cantina 10.0\Cantina\Cantina 2.0\Cantina 2.0\obj\Debug\net8.0-windows\Cantina 2.0.sourcelink.json
+C:\Users\isabe\OneDrive\Área de Trabalho\Git projetos\Cantina 10.0\Cantina\Cantina 2.0\Cantina 2.0\obj\Debug\net8.0-windows\Cantina 2.0.dll
+C:\Users\isabe\OneDrive\Área de Trabalho\Git projetos\Cantina 10.0\Cantina\Cantina 2.0\Cantina 2.0\obj\Debug\net8.0-windows\refint\Cantina 2.0.dll
+C:\Users\isabe\OneDrive\Área de Trabalho\Git projetos\Cantina 10.0\Cantina\Cantina 2.0\Cantina 2.0\obj\Debug\net8.0-windows\Cantina 2.0.pdb
+C:\Users\isabe\OneDrive\Área de Trabalho\Git projetos\Cantina 10.0\Cantina\Cantina 2.0\Cantina 2.0\obj\Debug\net8.0-windows\Cantina 2.0.genruntimeconfig.cache
+C:\Users\isabe\OneDrive\Área de Trabalho\Git projetos\Cantina 10.0\Cantina\Cantina 2.0\Cantina 2.0\obj\Debug\net8.0-windows\ref\Cantina 2.0.dll

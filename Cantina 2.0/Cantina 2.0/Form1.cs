@@ -77,6 +77,13 @@ namespace Cantina_2._0
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
+
+            if (listBox1.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor, selecione um produto antes de adicionar ao carrinho!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (listBox1.SelectedItem is Produto produtoSelecionado)
             {
                 int quantidade = (int)btnQuantidade.Value;
@@ -96,6 +103,13 @@ namespace Cantina_2._0
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
+
+            if (listBox2.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor, selecione um produto do carrinho antes de remover!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (listBox2.SelectedItem is Produto produtoSelecionado)
             {
                 var produtoCarrinho = carrinho.Listar()
@@ -131,6 +145,12 @@ namespace Cantina_2._0
 
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
+            if (carrinho.Listar().Count == 0)
+            {
+                MessageBox.Show("Não é possível finalizar a compra sem produtos no carrinho!\nPor favor, adicione pelo menos um produto.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (string.IsNullOrWhiteSpace(nomeCliente))
             {
                 MessageBox.Show("Por favor, informe o nome do cliente antes de finalizar o pedido!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -178,7 +198,10 @@ namespace Cantina_2._0
                 carrinho.Limpar();
                 listBox2.Items.Clear();
                 AtualizarTotal();
+                txtBox1.Clear();
+                txtBox2.Clear();
                 comboBox.SelectedIndex = -1;
+                txtViagem.Checked = false;
 
                 lblAviso.Visible = false;
                 lblAviso2.Visible = false;
