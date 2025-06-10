@@ -1,34 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\isabe\\OneDrive\\\u00C1rea de Trabalho\\Git projetos\\Cantina 10.0\\Cantina\\Cantina 2.0\\",
+  "WorkspaceRootPath": "C:\\Users\\25165046\\Desktop\\Git projetos\\Cantina\\Cantina\\Cantina 2.0\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0DC64481-1279-471E-A356-B8A5CF764F75}|Cantina 2.0\\Cantina 2.0.csproj|c:\\users\\isabe\\onedrive\\\u00E1rea de trabalho\\git projetos\\cantina 10.0\\cantina\\cantina 2.0\\cantina 2.0\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DC64481-1279-471E-A356-B8A5CF764F75}|Cantina 2.0\\Cantina 2.0.csproj|solutionrelative:cantina 2.0\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0DC64481-1279-471E-A356-B8A5CF764F75}|Cantina 2.0\\Cantina 2.0.csproj|c:\\users\\isabe\\onedrive\\\u00E1rea de trabalho\\git projetos\\cantina 10.0\\cantina\\cantina 2.0\\cantina 2.0\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0DC64481-1279-471E-A356-B8A5CF764F75}|Cantina 2.0\\Cantina 2.0.csproj|c:\\users\\25165046\\desktop\\git projetos\\cantina\\cantina\\cantina 2.0\\cantina 2.0\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0DC64481-1279-471E-A356-B8A5CF764F75}|Cantina 2.0\\Cantina 2.0.csproj|solutionrelative:cantina 2.0\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DC64481-1279-471E-A356-B8A5CF764F75}|Cantina 2.0\\Cantina 2.0.csproj|c:\\users\\isabe\\onedrive\\\u00E1rea de trabalho\\git projetos\\cantina 10.0\\cantina\\cantina 2.0\\cantina 2.0\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DC64481-1279-471E-A356-B8A5CF764F75}|Cantina 2.0\\Cantina 2.0.csproj|solutionrelative:cantina 2.0\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0DC64481-1279-471E-A356-B8A5CF764F75}|Cantina 2.0\\Cantina 2.0.csproj|c:\\users\\25165046\\desktop\\git projetos\\cantina\\cantina\\cantina 2.0\\cantina 2.0\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DC64481-1279-471E-A356-B8A5CF764F75}|Cantina 2.0\\Cantina 2.0.csproj|solutionrelative:cantina 2.0\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DC64481-1279-471E-A356-B8A5CF764F75}|Cantina 2.0\\Cantina 2.0.csproj|c:\\users\\isabe\\onedrive\\\u00E1rea de trabalho\\git projetos\\cantina 10.0\\cantina\\cantina 2.0\\cantina 2.0\\persistenciapedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DC64481-1279-471E-A356-B8A5CF764F75}|Cantina 2.0\\Cantina 2.0.csproj|solutionrelative:cantina 2.0\\persistenciapedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0DC64481-1279-471E-A356-B8A5CF764F75}|Cantina 2.0\\Cantina 2.0.csproj|c:\\users\\isabe\\onedrive\\\u00E1rea de trabalho\\git projetos\\cantina 10.0\\cantina\\cantina 2.0\\cantina 2.0\\carrinho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DC64481-1279-471E-A356-B8A5CF764F75}|Cantina 2.0\\Cantina 2.0.csproj|solutionrelative:cantina 2.0\\carrinho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0DC64481-1279-471E-A356-B8A5CF764F75}|Cantina 2.0\\Cantina 2.0.csproj|C:\\Users\\isabe\\OneDrive\\\u00C1rea de Trabalho\\Git projetos\\Cantina 10.0\\Cantina\\Cantina 2.0\\cantina 2.0\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0DC64481-1279-471E-A356-B8A5CF764F75}|Cantina 2.0\\Cantina 2.0.csproj|C:\\Users\\25165046\\Desktop\\Git projetos\\Cantina\\Cantina\\Cantina 2.0\\cantina 2.0\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0DC64481-1279-471E-A356-B8A5CF764F75}|Cantina 2.0\\Cantina 2.0.csproj|solutionrelative:cantina 2.0\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DC64481-1279-471E-A356-B8A5CF764F75}|Cantina 2.0\\Cantina 2.0.csproj|C:\\Users\\isabe\\OneDrive\\\u00C1rea de Trabalho\\Git projetos\\Cantina 10.0\\Cantina\\Cantina 2.0\\cantina 2.0\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0DC64481-1279-471E-A356-B8A5CF764F75}|Cantina 2.0\\Cantina 2.0.csproj|C:\\Users\\25165046\\Desktop\\Git projetos\\Cantina\\Cantina\\Cantina 2.0\\cantina 2.0\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0DC64481-1279-471E-A356-B8A5CF764F75}|Cantina 2.0\\Cantina 2.0.csproj|solutionrelative:cantina 2.0\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DC64481-1279-471E-A356-B8A5CF764F75}|Cantina 2.0\\Cantina 2.0.csproj|c:\\users\\25165046\\desktop\\git projetos\\cantina\\cantina\\cantina 2.0\\cantina 2.0\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DC64481-1279-471E-A356-B8A5CF764F75}|Cantina 2.0\\Cantina 2.0.csproj|solutionrelative:cantina 2.0\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DC64481-1279-471E-A356-B8A5CF764F75}|Cantina 2.0\\Cantina 2.0.csproj|c:\\users\\25165046\\desktop\\git projetos\\cantina\\cantina\\cantina 2.0\\cantina 2.0\\persistenciapedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DC64481-1279-471E-A356-B8A5CF764F75}|Cantina 2.0\\Cantina 2.0.csproj|solutionrelative:cantina 2.0\\persistenciapedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DC64481-1279-471E-A356-B8A5CF764F75}|Cantina 2.0\\Cantina 2.0.csproj|c:\\users\\25165046\\desktop\\git projetos\\cantina\\cantina\\cantina 2.0\\cantina 2.0\\carrinho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DC64481-1279-471E-A356-B8A5CF764F75}|Cantina 2.0\\Cantina 2.0.csproj|solutionrelative:cantina 2.0\\carrinho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,15 +38,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Carrinho.cs",
-              "DocumentMoniker": "C:\\Users\\isabe\\OneDrive\\\u00C1rea de Trabalho\\Git projetos\\Cantina 10.0\\Cantina\\Cantina 2.0\\Cantina 2.0\\Carrinho.cs",
+              "DocumentMoniker": "C:\\Users\\25165046\\Desktop\\Git projetos\\Cantina\\Cantina\\Cantina 2.0\\Cantina 2.0\\Carrinho.cs",
               "RelativeDocumentMoniker": "Cantina 2.0\\Carrinho.cs",
-              "ToolTip": "C:\\Users\\isabe\\OneDrive\\\u00C1rea de Trabalho\\Git projetos\\Cantina 10.0\\Cantina\\Cantina 2.0\\Cantina 2.0\\Carrinho.cs",
+              "ToolTip": "C:\\Users\\25165046\\Desktop\\Git projetos\\Cantina\\Cantina\\Cantina 2.0\\Cantina 2.0\\Carrinho.cs",
               "RelativeToolTip": "Cantina 2.0\\Carrinho.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAgwAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -55,11 +55,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "PersistenciaPedido.cs",
-              "DocumentMoniker": "C:\\Users\\isabe\\OneDrive\\\u00C1rea de Trabalho\\Git projetos\\Cantina 10.0\\Cantina\\Cantina 2.0\\Cantina 2.0\\PersistenciaPedido.cs",
+              "DocumentMoniker": "C:\\Users\\25165046\\Desktop\\Git projetos\\Cantina\\Cantina\\Cantina 2.0\\Cantina 2.0\\PersistenciaPedido.cs",
               "RelativeDocumentMoniker": "Cantina 2.0\\PersistenciaPedido.cs",
-              "ToolTip": "C:\\Users\\isabe\\OneDrive\\\u00C1rea de Trabalho\\Git projetos\\Cantina 10.0\\Cantina\\Cantina 2.0\\Cantina 2.0\\PersistenciaPedido.cs",
+              "ToolTip": "C:\\Users\\25165046\\Desktop\\Git projetos\\Cantina\\Cantina\\Cantina 2.0\\Cantina 2.0\\PersistenciaPedido.cs",
               "RelativeToolTip": "Cantina 2.0\\PersistenciaPedido.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAvwCAAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -68,11 +68,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Produto.cs",
-              "DocumentMoniker": "C:\\Users\\isabe\\OneDrive\\\u00C1rea de Trabalho\\Git projetos\\Cantina 10.0\\Cantina\\Cantina 2.0\\Cantina 2.0\\Produto.cs",
+              "DocumentMoniker": "C:\\Users\\25165046\\Desktop\\Git projetos\\Cantina\\Cantina\\Cantina 2.0\\Cantina 2.0\\Produto.cs",
               "RelativeDocumentMoniker": "Cantina 2.0\\Produto.cs",
-              "ToolTip": "C:\\Users\\isabe\\OneDrive\\\u00C1rea de Trabalho\\Git projetos\\Cantina 10.0\\Cantina\\Cantina 2.0\\Cantina 2.0\\Produto.cs",
+              "ToolTip": "C:\\Users\\25165046\\Desktop\\Git projetos\\Cantina\\Cantina\\Cantina 2.0\\Cantina 2.0\\Produto.cs",
               "RelativeToolTip": "Cantina 2.0\\Produto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -81,11 +81,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\isabe\\OneDrive\\\u00C1rea de Trabalho\\Git projetos\\Cantina 10.0\\Cantina\\Cantina 2.0\\Cantina 2.0\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\25165046\\Desktop\\Git projetos\\Cantina\\Cantina\\Cantina 2.0\\Cantina 2.0\\Form1.cs",
               "RelativeDocumentMoniker": "Cantina 2.0\\Form1.cs",
-              "ToolTip": "C:\\Users\\isabe\\OneDrive\\\u00C1rea de Trabalho\\Git projetos\\Cantina 10.0\\Cantina\\Cantina 2.0\\Cantina 2.0\\Form1.cs [Projeto]",
+              "ToolTip": "C:\\Users\\25165046\\Desktop\\Git projetos\\Cantina\\Cantina\\Cantina 2.0\\Cantina 2.0\\Form1.cs [Projeto]",
               "RelativeToolTip": "Cantina 2.0\\Form1.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T12:34:55.765Z",
@@ -93,24 +93,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\isabe\\OneDrive\\\u00C1rea de Trabalho\\Git projetos\\Cantina 10.0\\Cantina\\Cantina 2.0\\Cantina 2.0\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\25165046\\Desktop\\Git projetos\\Cantina\\Cantina\\Cantina 2.0\\Cantina 2.0\\Form1.cs",
               "RelativeDocumentMoniker": "Cantina 2.0\\Form1.cs",
-              "ToolTip": "C:\\Users\\isabe\\OneDrive\\\u00C1rea de Trabalho\\Git projetos\\Cantina 10.0\\Cantina\\Cantina 2.0\\Cantina 2.0\\Form1.cs",
+              "ToolTip": "C:\\Users\\25165046\\Desktop\\Git projetos\\Cantina\\Cantina\\Cantina 2.0\\Cantina 2.0\\Form1.cs",
               "RelativeToolTip": "Cantina 2.0\\Form1.cs",
-              "ViewState": "AgIAALwAAAAAAAAAAAAowMsAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA9wB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T13:13:21.827Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "Form2.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\isabe\\OneDrive\\\u00C1rea de Trabalho\\Git projetos\\Cantina 10.0\\Cantina\\Cantina 2.0\\Cantina 2.0\\Form2.cs",
+              "DocumentMoniker": "C:\\Users\\25165046\\Desktop\\Git projetos\\Cantina\\Cantina\\Cantina 2.0\\Cantina 2.0\\Form2.cs",
               "RelativeDocumentMoniker": "Cantina 2.0\\Form2.cs",
-              "ToolTip": "C:\\Users\\isabe\\OneDrive\\\u00C1rea de Trabalho\\Git projetos\\Cantina 10.0\\Cantina\\Cantina 2.0\\Cantina 2.0\\Form2.cs [Projeto]",
+              "ToolTip": "C:\\Users\\25165046\\Desktop\\Git projetos\\Cantina\\Cantina\\Cantina 2.0\\Cantina 2.0\\Form2.cs [Projeto]",
               "RelativeToolTip": "Cantina 2.0\\Form2.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-30T11:40:35.087Z",
@@ -118,13 +118,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form2.cs",
-              "DocumentMoniker": "C:\\Users\\isabe\\OneDrive\\\u00C1rea de Trabalho\\Git projetos\\Cantina 10.0\\Cantina\\Cantina 2.0\\Cantina 2.0\\Form2.cs",
+              "DocumentMoniker": "C:\\Users\\25165046\\Desktop\\Git projetos\\Cantina\\Cantina\\Cantina 2.0\\Cantina 2.0\\Form2.cs",
               "RelativeDocumentMoniker": "Cantina 2.0\\Form2.cs",
-              "ToolTip": "C:\\Users\\isabe\\OneDrive\\\u00C1rea de Trabalho\\Git projetos\\Cantina 10.0\\Cantina\\Cantina 2.0\\Cantina 2.0\\Form2.cs",
+              "ToolTip": "C:\\Users\\25165046\\Desktop\\Git projetos\\Cantina\\Cantina\\Cantina 2.0\\Cantina 2.0\\Form2.cs",
               "RelativeToolTip": "Cantina 2.0\\Form2.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAGsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-30T12:00:49.714Z",
               "EditorCaption": ""

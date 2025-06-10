@@ -19,16 +19,16 @@ namespace Cantina_2._0
             listBox1.DisplayMember = "Nome";
             listBox1.ValueMember = "Preco";
 
-            listBox1.Items.Add(new Produto { Nome = "Pão de Queijo (3,50)", Preco = 3.50 });
-            listBox1.Items.Add(new Produto { Nome = "Coxinha (5,00)", Preco = 5.00 });
-            listBox1.Items.Add(new Produto { Nome = "Pastel de Carne (6,00)", Preco = 6.00 });
-            listBox1.Items.Add(new Produto { Nome = "Pastel de Queijo (5,50)", Preco = 5.50 });
-            listBox1.Items.Add(new Produto { Nome = "Suco Natural (300mL) (4,00)", Preco = 4.00 });
-            listBox1.Items.Add(new Produto { Nome = "Refrigerante Lata (4,50)", Preco = 4.50 });
-            listBox1.Items.Add(new Produto { Nome = "Hambúrguer Simples (8,00)", Preco = 8.00 });
-            listBox1.Items.Add(new Produto { Nome = "Hambúrguer com Queijo (9,00)", Preco = 9.00 });
-            listBox1.Items.Add(new Produto { Nome = "X-Tudo (12,00)", Preco = 12.00 });
-            listBox1.Items.Add(new Produto { Nome = "Água Mineral (500mL) (2,50)", Preco = 2.50 });
+            listBox1.Items.Add(new Produto { Nome = "Pão de Queijo (R$3,50)", Preco = 3.50 });
+            listBox1.Items.Add(new Produto { Nome = "Coxinha (R$5,00)", Preco = 5.00 });
+            listBox1.Items.Add(new Produto { Nome = "Pastel de Carne (R$6,00)", Preco = 6.00 });
+            listBox1.Items.Add(new Produto { Nome = "Pastel de Queijo (R$5,50)", Preco = 5.50 });
+            listBox1.Items.Add(new Produto { Nome = "Suco Natural (300mL) (R$4,00)", Preco = 4.00 });
+            listBox1.Items.Add(new Produto { Nome = "Refrigerante Lata (R$4,50)", Preco = 4.50 });
+            listBox1.Items.Add(new Produto { Nome = "Hambúrguer Simples (R$8,00)", Preco = 8.00 });
+            listBox1.Items.Add(new Produto { Nome = "Hambúrguer com Queijo (R$9,00)", Preco = 9.00 });
+            listBox1.Items.Add(new Produto { Nome = "X-Tudo (R$12,00)", Preco = 12.00 });
+            listBox1.Items.Add(new Produto { Nome = "Água Mineral (500mL) (R$2,50)", Preco = 2.50 });
 
             btnQuantidade.Minimum = 1;
             btnQuantidade.Maximum = 10;
